@@ -1,5 +1,7 @@
 package com.divergentsl.corejava.inheritance;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class Manager extends Employee {
@@ -16,7 +18,7 @@ public class Manager extends Employee {
 	}
 
 	@Override
-	public double getSalary() /* throws FileNotFoundException */ {
+	public double getSalary()  throws IOException  {
 		// TODO Note we used "super" keyword to access the method as we cannot access
 		// the private files directly
 		return super.getSalary() + this.bonus;

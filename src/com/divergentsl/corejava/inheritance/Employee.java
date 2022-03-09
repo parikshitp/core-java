@@ -1,5 +1,6 @@
 package com.divergentsl.corejava.inheritance;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -8,27 +9,27 @@ public class Employee {
 	
 	public static void main(String[] args) {
 		
-		Employee emp = new Employee("Amit",30000);
+		Employee emp = new Employee("Amit",30000, LocalDate.now() );
 		
 		System.out.println(emp.getName());
 		
 		emp.setSalary(40000);
 		
-		System.out.println(emp.getSalary());
+		//System.out.println(emp.getSalary());
 		
 	}
 	private double salary;
 	private String name;
 	private LocalDate hireDay;
 
-	public Employee(String name, double salary/* , LocalDate hireDay */) {
+	public Employee(String name, double salary , LocalDate hireDay ) {
 		this.salary = salary;
 		this.name = name;
-		//this.hireDay = hireDay;
+		this.hireDay = hireDay;
 
 	}
 
-	public double getSalary() /* throws IOException */ {
+	public double getSalary()  throws IOException  {
 		return salary;
 	}
 

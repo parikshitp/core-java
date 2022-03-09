@@ -1,10 +1,11 @@
 package com.divergentsl.corejava.inheritance;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class ManagerTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// construct a Manager object
 
 		var boss = new Manager("Carl Cracker", 80000, LocalDate.of(1987, 12, 15));
